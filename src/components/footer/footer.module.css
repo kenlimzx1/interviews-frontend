@@ -1,0 +1,27 @@
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  height: 45px;
+  min-height: 45px;
+  max-height: 45px;
+  overflow: hidden;
+}
+
+.webInfo {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.contacts {
+  flex-grow: 1;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+}
+
+.contacts button {
+  margin-left: 1rem;
+}
