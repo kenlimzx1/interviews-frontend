@@ -31,22 +31,22 @@ const theme = createMuiTheme({
         fontSize: 14,
       },
       h1: {
-        fontSize: 34,
+        fontSize: 28,
       },
       h2: {
-        fontSize: 30,
+        fontSize: 24,
       },
       h3: {
-        fontSize: 26,
+        fontSize: 20,
       },
       h4: {
-        fontSize: 22,
+        fontSize: 16,
       },
       h5: {
-        fontSize: 18,
+        fontSize: 14,
       },
       h6: {
-        fontSize: 14,
+        fontSize: 12,
       },
     }
   }

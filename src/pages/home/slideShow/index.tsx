@@ -16,7 +16,7 @@ const slideProperties = {
 
 const Slideshow: React.FC = () => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <Slide easing="ease" {...slideProperties}>
         <div className="each-slide">
           <div className={styles.imageWrapper}>
@@ -34,7 +34,7 @@ const Slideshow: React.FC = () => {
           </div>
         </div>
       </Slide>
-    </div>
+    </section>
   )
 };
 
