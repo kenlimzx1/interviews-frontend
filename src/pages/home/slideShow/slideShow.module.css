@@ -1,0 +1,25 @@
+.container {
+  max-height: 450px;
+  margin: 1rem 0;
+  display: block;
+}
+
+.imageWrapper {
+  width: 100%;
+  max-height: 450px;
+  display: flex;
+  justify-content: center;
+}
+
+.imageWrapper img {
+  object-fit: contain;
+}
+
+.indicator {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 1rem;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}

@@ -9,3 +9,8 @@ html, body, #root {
 *::after, *::before {
   box-sizing: border-box;
 }
+
+.indicators .active {
+  background-color: #C4C4C4;
+  border: .8px solid  #C4C4C4;
+}
