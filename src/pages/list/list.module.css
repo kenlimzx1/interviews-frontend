@@ -1,0 +1,39 @@
+:root {
+  --wrapper-width: 920px;
+}
+
+.container {
+  width: 100%;
+}
+
+.wrapper {
+  width: var(--wrapper-width);
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.searchResult {
+  padding: 1rem 0;
+}
+
+.listItem {
+  background-color: #C4C4C4;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.listItemImg {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.listItemImg img {
+  object-fit: contain;
+  width: 100%;
+}
+
+@media(max-width: 920px) {
+  .wrapper {
+    width: 100%;
+  }
+}

@@ -3,18 +3,21 @@ import MuiTextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { Control, Controller } from 'react-hook-form';
-import { IconButton, InputAdornment } from '@material-ui/core';
+import { IconButton, InputAdornment, InputProps } from '@material-ui/core';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 
 interface TextFieldProps {
-  label: string;
+  label?: string;
   type: string;
   labelOptions?: ReactElement;
   control: Control;
   name: string;
   placeholder?: string;
   required?: boolean;
+  InputProps?: InputProps;
+  fullWidth?: boolean;
+  noMarginBottom?: boolean;
 }
 
 const TextField: React.FC<TextFieldProps> = (props) => {
@@ -22,7 +25,8 @@ const TextField: React.FC<TextFieldProps> = (props) => {
     label, type,
     placeholder, name,
     labelOptions, control,
-    required,
+    required, InputProps,
+    fullWidth, noMarginBottom,
   } = props;
   const [show, setShow] = useState(false);
 
@@ -30,22 +34,23 @@ const TextField: React.FC<TextFieldProps> = (props) => {
     <Box
       display="flex"
       flexDirection="column"
-      mb="1rem"
+      mb={(noMarginBottom) ? 0 : "1rem"}
     >
-      <Box
-        display="flex"
-        alignItems="center"
-        justifyContent="space-between"
-      >
-        <Box>
-          <Typography>{label} {required && "*"}</Typography>
-         
-        </Box>
-        <Box>
-          {labelOptions}
-        </Box>
-      </Box>
+      {label
+        && <Box
+          display="flex"
+          alignItems="center"
+          justifyContent="space-between"
+        >
+          <Box>
+            <Typography>{label} {required && "*"}</Typography>
+          </Box>
+          <Box>
+            {labelOptions}
+          </Box>
+        </Box>}
       <Controller
+        fullWidth={fullWidth}
         required={required}
         control={control}
         as={MuiTextField}
@@ -66,7 +71,8 @@ const TextField: React.FC<TextFieldProps> = (props) => {
                 }
               </IconButton>
             </InputAdornment>
-          )
+          ),
+          ...InputProps,
         }}
         type={(type === 'password' && show) ? 'text' : type}
         name={name}

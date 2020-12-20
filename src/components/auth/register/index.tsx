@@ -62,9 +62,12 @@ const Register: React.FC<RegisterProps> = (props: RegisterProps) => {
         email: values.email,
         password: values.password,
       })
+
+      alert('Register Successfully!');
     }
 
     window.localStorage.setItem("users", JSON.stringify(users));
+    
   }
 
   return (

@@ -6,6 +6,7 @@ import ThemeProvider from './components/theme';
 import Provider from './context';
 import Reducer, { initialValue } from './context/reducer';
 import Home from './pages/home';
+import List from './pages/list';
 import NotFound from './pages/notFound';
 
 function App() {
@@ -22,6 +23,11 @@ function App() {
                 exact
                 path={"/"}
                 component={Home}
+              />
+              <Route
+                exact
+                path={"/list"}
+                component={List}
               />
               <Route
                 component={NotFound}
