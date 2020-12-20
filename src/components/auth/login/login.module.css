@@ -1,0 +1,22 @@
+.form {
+  padding: 1rem 0;
+}
+
+.socialLoginBtn {
+  margin: 1rem 0;
+}
+
+.googleBtn, .facebookBtn {
+  flex: 50%;
+}
+
+.socialLoginBtn .facebookBtn {
+  background-color: #3A589A;
+  color: white;
+  margin-left: 1rem;
+}
+
+.socialLoginBtn .googleBtn {
+  border: 1px solid #BBBDC9;
+  margin-right: 1rem;
+}

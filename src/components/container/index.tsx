@@ -6,7 +6,7 @@ import styles from './container.module.css';
 const Container: React.FC = (props) => {
   const { children } = props;
 
-  const container = useRef<HTMLElement>(null);
+  const container = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     let scrollEvent:any = null;

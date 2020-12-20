@@ -12,6 +12,14 @@ const theme = createMuiTheme({
     }
   },
   overrides: {
+    MuiOutlinedInput: {
+      notchedOutline: {
+        border: 'none',
+      },
+      root: {
+        backgroundColor: '#F2F2F2',
+      },
+    },
     MuiButton: {
       contained: {
         boxShadow: 'none',
@@ -20,7 +28,7 @@ const theme = createMuiTheme({
         }
       },
       label: {
-        textTransform: 'capitalize',
+        textTransform: 'none',
       }
     }, 
     MuiTypography: {
